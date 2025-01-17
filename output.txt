@@ -1,0 +1,670 @@
+Set parameter Username
+Academic license - for non-commercial use only - expires 2025-09-25
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (win64 - Windows 11+.0 (26100.2))
+
+CPU model: Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 30 rows, 48 columns and 258 nonzeros
+Model fingerprint: 0xb56e17f3
+Variable types: 12 continuous, 36 integer (36 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 54.0000000
+Presolve removed 12 rows and 6 columns
+Presolve time: 0.00s
+Presolved: 18 rows, 42 columns, 139 nonzeros
+Variable types: 0 continuous, 42 integer (36 binary)
+
+Root relaxation: objective 1.691667e+01, 29 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   16.91667    0    6   54.00000   16.91667  68.7%     -    0s
+H    0     0                      19.0000000   16.91667  11.0%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  MIR: 1
+  GUB cover: 1
+
+Explored 1 nodes (29 simplex iterations) in 0.03 seconds (0.00 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 19 54 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.900000000000e+01, best bound 1.900000000000e+01, gap 0.0000%
+
+Optimal Tardiness: 19.0
+Optimal sequence: [4, 1, 2, 3, 6, 5]
+
+Initial Solution:
+  Sequence: [2, 4, 1, 6, 5, 3] | Tardiness: 26
+  Tabu tenure: 10
+
+Iteration 1:
+  Move Selected: [2, 1, 0, 2]
+  Current Sequence: [1, 4, 2, 6, 5, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 6, 5, 3] | Best Tardiness: 23
+  Tabu List: [[2, 1, 0, 2]]
+
+Iteration 2:
+  Move Selected: [5, 3, 4, 5]
+  Current Sequence: [1, 4, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 6, 3, 5] | Best Tardiness: 21
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5]]
+
+Iteration 3:
+  Move Selected: [6, 3, 3, 4]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4]]
+
+Iteration 4:
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1]]
+
+Iteration 5:
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 6:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 7:
+  Move Selected: [3, 6, 3, 4]
+  Current Sequence: [4, 1, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4]]
+
+Iteration 8:
+  Move Selected: [3, 5, 4, 5]
+  Current Sequence: [4, 1, 2, 6, 5, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5]]
+
+Iteration 9:
+  Move Selected: [6, 5, 3, 4]
+  Current Sequence: [4, 1, 2, 5, 6, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4]]
+
+Iteration 10:
+  Move Selected: [5, 3, 3, 5]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5]]
+
+Iteration 11:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5]]
+
+Iteration 12:
+  Move Selected: [1, 2, 0, 2]
+  Current Sequence: [2, 4, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2]]
+
+Iteration 13:
+  Move Selected: [2, 4, 0, 1]
+  Current Sequence: [4, 2, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[5, 3, 4, 5], [6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1]]
+
+Iteration 14:
+  Move Selected: [2, 1, 1, 2]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 3, 3, 4], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2]]
+
+Iteration 15:
+  Move Selected: [1, 2, 1, 2]
+  Current Sequence: [4, 2, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2]]
+
+Iteration 16:
+  Objective aspiration criteria applied for the move [2, 1, 1, 2]
+  Move Selected: [2, 1, 1, 2]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2]]
+
+Iteration 17:
+  Move Selected: [2, 3, 2, 3]
+  Current Sequence: [4, 1, 3, 2, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3]]
+
+Iteration 18:
+  Move Selected: [3, 2, 2, 3]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 6, 3, 4], [3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 19:
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 5, 4, 5], [6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1]]
+
+Iteration 20:
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1]]
+
+Iteration 21:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 5, 3, 4], [5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1]]
+
+Iteration 22:
+  Move Selected: [3, 6, 3, 4]
+  Current Sequence: [1, 4, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[5, 3, 3, 5], [1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4]]
+
+Iteration 23:
+  Move Selected: [6, 3, 3, 4]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 0, 2], [2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4]]
+
+Iteration 24:
+  Move Selected: [4, 2, 1, 2]
+  Current Sequence: [1, 2, 4, 3, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 4, 0, 1], [2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2]]
+
+Iteration 25:
+  Move Selected: [2, 4, 1, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2]]
+
+Iteration 26:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 1, 2], [1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2]]
+
+Iteration 27:
+  Move Selected: [3, 5, 3, 5]
+  Current Sequence: [4, 1, 2, 5, 6, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5]]
+
+Iteration 28:
+  Move Selected: [5, 3, 3, 5]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 3, 2, 3], [3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5]]
+
+Iteration 29:
+  Move Selected: [1, 2, 1, 2]
+  Current Sequence: [4, 2, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 2, 2, 3], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2]]
+
+Iteration 30:
+  Move Selected: [2, 1, 1, 2]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2]]
+
+Iteration 31:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2]]
+
+Iteration 32:
+  Move Selected: [1, 2, 0, 2]
+  Current Sequence: [2, 4, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2]]
+
+Iteration 33:
+  Move Selected: [2, 1, 0, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2]]
+
+Iteration 34:
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1]]
+
+Iteration 35:
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 36:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 37:
+  Move Selected: [3, 6, 3, 4]
+  Current Sequence: [4, 1, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4]]
+
+Iteration 38:
+  Move Selected: [6, 3, 3, 4]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4]]
+
+Iteration 39:
+  Move Selected: [2, 3, 2, 3]
+  Current Sequence: [4, 1, 3, 2, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3]]
+
+Iteration 40:
+  Move Selected: [3, 2, 2, 3]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 41:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 42:
+  Move Selected: [4, 2, 1, 2]
+  Current Sequence: [1, 2, 4, 3, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2]]
+
+Iteration 43:
+  Move Selected: [2, 4, 1, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2]]
+
+Iteration 44:
+  Move Selected: [3, 5, 3, 5]
+  Current Sequence: [1, 4, 2, 5, 6, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5]]
+
+Iteration 45:
+  Move Selected: [5, 3, 3, 5]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5]]
+
+Iteration 46:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5]]
+
+Iteration 47:
+  Move Selected: [1, 2, 1, 2]
+  Current Sequence: [4, 2, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2]]
+
+Iteration 48:
+  Move Selected: [2, 1, 1, 2]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 6, 3, 4], [6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2]]
+
+Iteration 49:
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 3, 3, 4], [2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1]]
+
+Iteration 50:
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1]]
+
+Iteration 51:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 3, 2, 3], [3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1]]
+
+Iteration 52:
+  Move Selected: [3, 6, 3, 4]
+  Current Sequence: [1, 4, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 2, 2, 3], [4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4]]
+
+Iteration 53:
+  Move Selected: [6, 3, 3, 4]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 2, 1, 2], [2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4]]
+
+Iteration 54:
+  Move Selected: [1, 2, 0, 2]
+  Current Sequence: [2, 4, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 4, 1, 2], [3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2]]
+
+Iteration 55:
+  Move Selected: [2, 1, 0, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2]]
+
+Iteration 56:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 5, 3, 5], [5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2]]
+
+Iteration 57:
+  Move Selected: [2, 3, 2, 3]
+  Current Sequence: [4, 1, 3, 2, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[5, 3, 3, 5], [1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3]]
+
+Iteration 58:
+  Move Selected: [3, 2, 2, 3]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 1, 2], [2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 59:
+  Move Selected: [3, 5, 3, 5]
+  Current Sequence: [4, 1, 2, 5, 6, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 1, 2], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5]]
+
+Iteration 60:
+  Move Selected: [5, 3, 3, 5]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5]]
+
+Iteration 61:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5]]
+
+Iteration 62:
+  Move Selected: [4, 2, 1, 2]
+  Current Sequence: [1, 2, 4, 3, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2]]
+
+Iteration 63:
+  Move Selected: [2, 4, 1, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2]]
+
+Iteration 64:
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 3, 3, 4], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1]]
+
+Iteration 65:
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 66:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 67:
+  Move Selected: [3, 6, 3, 4]
+  Current Sequence: [4, 1, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4]]
+
+Iteration 68:
+  Move Selected: [6, 3, 3, 4]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4]]
+
+Iteration 69:
+  Move Selected: [1, 2, 1, 2]
+  Current Sequence: [4, 2, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2]]
+
+Iteration 70:
+  Move Selected: [2, 1, 1, 2]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2]]
+
+Iteration 71:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 5, 3, 5], [5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2]]
+
+Iteration 72:
+  Move Selected: [1, 2, 0, 2]
+  Current Sequence: [2, 4, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[5, 3, 3, 5], [4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2]]
+
+Iteration 73:
+  Move Selected: [2, 1, 0, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 2, 1, 2], [2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2]]
+
+Iteration 74:
+  Move Selected: [2, 3, 2, 3]
+  Current Sequence: [1, 4, 3, 2, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 4, 1, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3]]
+
+Iteration 75:
+  Move Selected: [3, 2, 2, 3]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 76:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 77:
+  Move Selected: [3, 5, 3, 5]
+  Current Sequence: [4, 1, 2, 5, 6, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5]]
+
+Iteration 78:
+  Move Selected: [5, 3, 3, 5]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 6, 3, 4], [6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5]]
+
+Iteration 79:
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 3, 3, 4], [1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1]]
+
+Iteration 80:
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1]]
+
+Iteration 81:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 1, 2], [2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1]]
+
+Iteration 82:
+  Move Selected: [3, 6, 3, 4]
+  Current Sequence: [1, 4, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 1, 2], [1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4]]
+
+Iteration 83:
+  Move Selected: [6, 3, 3, 4]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 0, 2], [2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4]]
+
+Iteration 84:
+  Move Selected: [4, 2, 1, 2]
+  Current Sequence: [1, 2, 4, 3, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 0, 2], [2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2]]
+
+Iteration 85:
+  Move Selected: [2, 4, 1, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2]]
+
+Iteration 86:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 3, 2, 3], [3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2]]
+
+Iteration 87:
+  Move Selected: [1, 2, 1, 2]
+  Current Sequence: [4, 2, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 2, 2, 3], [3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2]]
+
+Iteration 88:
+  Move Selected: [2, 1, 1, 2]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 5, 3, 5], [5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2]]
+
+Iteration 89:
+  Move Selected: [2, 3, 2, 3]
+  Current Sequence: [4, 1, 3, 2, 6, 5] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[5, 3, 3, 5], [4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3]]
+
+Iteration 90:
+  Move Selected: [3, 2, 2, 3]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 91:
+  Objective aspiration criteria applied for the move [4, 1, 0, 1]
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 1, 0, 1], [1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3]]
+
+Iteration 92:
+  Move Selected: [1, 2, 0, 2]
+  Current Sequence: [2, 4, 1, 3, 6, 5] | Tardiness: 22
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 4, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2]]
+
+Iteration 93:
+  Move Selected: [2, 1, 0, 2]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[3, 6, 3, 4], [6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2]]
+
+Iteration 94:
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[6, 3, 3, 4], [4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1]]
+
+Iteration 95:
+  Move Selected: [4, 1, 0, 1]
+  Current Sequence: [1, 4, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 96:
+  Objective aspiration criteria applied for the move [1, 4, 0, 1]
+  Move Selected: [1, 4, 0, 1]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[4, 2, 1, 2], [2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1]]
+
+Iteration 97:
+  Move Selected: [3, 6, 3, 4]
+  Current Sequence: [4, 1, 2, 6, 3, 5] | Tardiness: 21
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 4, 1, 2], [1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4]]
+
+Iteration 98:
+  Move Selected: [6, 3, 3, 4]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[1, 2, 1, 2], [2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4]]
+
+Iteration 99:
+  Move Selected: [3, 5, 3, 5]
+  Current Sequence: [4, 1, 2, 5, 6, 3] | Tardiness: 23
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 1, 1, 2], [2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [3, 5, 3, 5]]
+
+Iteration 100:
+  Move Selected: [5, 3, 3, 5]
+  Current Sequence: [4, 1, 2, 3, 6, 5] | Tardiness: 19
+  Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
+  Tabu List: [[2, 3, 2, 3], [3, 2, 2, 3], [1, 2, 0, 2], [2, 1, 0, 2], [1, 4, 0, 1], [4, 1, 0, 1], [3, 6, 3, 4], [6, 3, 3, 4], [3, 5, 3, 5], [5, 3, 3, 5]]
+
+Final Results:
+Best Solution: [1, 4, 2, 3, 6, 5] | Best Tardiness: 19
