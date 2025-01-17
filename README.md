@@ -1,6 +1,8 @@
-# Tabu Search, Python implementation for Job Scheduling Optimization
+# Tabu Search: Python Implementation for Job Scheduling Optimization
 
-Homework for the course Optimization Algorithms, Università degli Studi di Brescia.
+Homework for the Optimization Algorithms course at Università degli Studi di Brescia.
+
+Before applying the Tabu Search algorithm, the optimal solution for the job scheduling problem was found using Gurobi for comparison purposes.
 
 For more details regarding the homework assignment, the Tabu Search implementation, and the results, please refer to the [TabuSearch_Exercise_Report.pdf](TabuSearch_Exercise_Report.pdf) file.
 
