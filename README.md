@@ -1,18 +1,35 @@
-# Tabu Search: Python Implementation for Job Scheduling Optimization
+# Tabu Search: Job Scheduling Optimization
 
-Homework for the Optimization Algorithms course at Università degli Studi di Brescia.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Algorithm](https://img.shields.io/badge/Algorithm-Tabu%20Search-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-Before applying the Tabu Search algorithm, the optimal solution for the job scheduling problem was found using Gurobi for comparison purposes.
+A Python implementation of the **Tabu Search** algorithm designed to solve a simple batch processing and job scheduling problem. 
 
-For more details regarding the homework assignment, the Tabu Search implementation, and the results, please refer to the [TabuSearch_Exercise_Report.pdf](TabuSearch_Exercise_Report.pdf) file.
+This project was developed as an assignment for the *Optimization Algorithms* course at the **Università degli Studi di Brescia**. 
 
-The Python code for the implementation can be found in the [Tabu_Search_exercise.py](Tabu_Search_exercise.py) file. 
+## About The Project
 
-- The textual output from a search can be found in [output.txt](output.txt).
-- The graph showing the incumbent solution versus the current solution is saved as [tabu_search_progress.png](tabu_search_progress.png).
+The goal of this repository is to demonstrate the effectiveness of heuristic algorithms in operations research. Specifically, it tackles a job scheduling problem using **Tabu Search**. 
 
-These files are generated directly by the code.
+To evaluate the algorithm's performance and accuracy, the absolute optimal solution for the scheduling problem was first computed using **Gurobi** (a mathematical optimization solver). The results from the Tabu Search were then compared against this exact Gurobi baseline to measure heuristic efficiency.
 
+## Repository Structure
 
+* **`Tabu_Search_exercise.py`**: The main Python script containing the logic for the Tabu Search implementation.
+* **`TabuSearch_Exercise_Report.pdf`**: Comprehensive documentation detailing the homework assignment, the mathematical formulation, the algorithm's design, and a full analysis of the results.
+* **`project_presentation.pdf`**: Presentation slides summarizing the project's methodology and findings.
+* **`output.txt`**: Automatically generated textual output logging the steps and final results of the search process.
+* **`tabu_search_progress.png`**: Automatically generated graph plotting the *Incumbent Solution* (best found so far) versus the *Current Solution* over the algorithm's iterations.
 
+## Getting Started
 
+### Prerequisites
+To run the code, you will need Python installed on your machine, along with libraries commonly used for data visualization and numerical operations. 
+* Python 3.x
+* Required libraries (e.g., `matplotlib` for generating the progress graph). 
+
+### Usage
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/luca-pugnetti/Tabu_Search_Python.git](https://github.com/luca-pugnetti/Tabu_Search_Python.git)
